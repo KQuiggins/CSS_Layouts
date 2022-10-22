@@ -1,0 +1,161 @@
+/* Global box-sizing fix */
+
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+/* sets green background color and font */
+body{
+    background-color: #709b90;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Global Margins */
+body * + * {
+    margin-top: 1.5em;
+}
+
+/* Double container: centers page contents */
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* Makes site-nav a flex container */
+/* Adds padding to menu, outside of the links */
+.site-nav{
+    display: flex;
+    padding: .5em;
+    list-style-type: none;
+    background-color: #5f4b44;
+    border-radius: .2em;
+}
+
+/* overrides the lobotomized owl top margin */
+.site-nav > li{
+    margin-top: 0;
+}
+
+/* Makes links block level so they add to the parent elements' height */
+/* Adds padding inside the links */
+.site-nav > li > a{
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+}
+
+/* Targets every list item that follows another list item */
+.site-nav > li + li{
+    margin-left: 1.5em;
+}
+
+/* Auto margins inside a flexbox will fill the available space */
+.site-nav > .nav-right{
+    margin-left: auto;
+}
+
+/* Adds a background color and padding to the three tiles */
+.tile{
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+/* Applies flexbox to main container */
+.flex{
+    display: flex;
+}
+
+/* Removes top margin and adds space between flex items */
+.flex > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.column-main{
+    flex: 2;
+}
+
+
+/* A flex item for the outer flexbox and a flex container for the new inner one */
+.column-sidebar{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Applies flex grow to the items within */
+.column-sidebar > .tile{
+    flex: 1;
+}
+
+/* Makes the heading bold, right-aligned, and all caps */
+.login-form h3{
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+/* Styles all text-like inputs (not checkboxes or radio buttons) */
+.login-form input:not([type=checkbox]) :not([type=radio]){
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+
+
+}
+
+.centered{
+    text-align: center;
+}
+
+/* Centers flex items on main axis and cross axis */
+.cost{
+    display: flex;
+    justify-content: center;
+    line-height: .7;
+}
+
+/* Overrides margins from the lobotomized owl */
+.cost > span{
+    margin-top: 0;
+}
+
+/* Sets different font-sizes for each part of the cost */
+.cost-currency{
+    font-size: 2rem;
+}
+
+.cost-dollars{
+    font-size: 4rem;
+}
+
+.cost-cents{
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+}
