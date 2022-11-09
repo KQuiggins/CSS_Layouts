@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js"></script>
+        <title>Positioning & Stacking Context</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="top-banner-inner">
+                <p>Find out what is going on in the tech world each month. Sign up for Kentech's
+                    newsletter:</p>
+                <!-- Button trigger for the modal -->
+                <button id="open">Sign up</button>
+            </div>
+        </header>
+        <!-- Container for the modal -->
+        <div class="modal" id="modal">
+            <!-- Backdrop to obscure content behind modal -->
+            <div class="modal-backdrop"></div>
+            <!-- Start modal contents -->
+            <div class="modal-body">
+                <button class="modal-close" id="close">close</button>
+                <h2>Kentech Newsletter</h2>
+                <p>Sign up for our monthly newsletter. No spam. Cancel anytime!</p>
+                <form>
+                    <p>
+                        <label for="email">Email address:</label>
+                        <input type="text" name="email">
+                    </p>
+                    <p><button type="submit">Submit</button></p>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <main class="col-ain">
+                <nav>
+                    <!-- Container for dropdown menu -->
+                    <div class="dropdown">
+                        <!-- Label will always be visible -->
+                        <div class="dropdown-label">Main Menu</div>
+                        <!-- Start show/hide div -->
+                        <div class="dropdown-menu">
+                            <ul class="submenu">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/designs">Coffees</a></li>
+                                <li><a href="/hire">Brewers</a></li>
+                                <li><a href="/portfolio">Specials</a></li>
+                                <li><a href="/about">About us</a></li>
+                            </ul>
+                        </div>
+                        <!-- End show/hide div -->
+                    </div>
+                </nav>
+                <h1>Kentech Freelance Web Design</h1>
+            </main>
+            <aside class="col-sidebar">
+                <div class="affix">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/designs">Coffees</a></li>
+                        <li><a href="/hire">Brewers</a></li>
+                        <li><a href="/portfolio">Specials</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </body>
+
+</html>
