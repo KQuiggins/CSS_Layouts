@@ -82,9 +82,27 @@ button {
 }
 
 .container{
+   /*  Makes the container a flex container for the 2-column layout */
+   display: flex;
     width: 80%;
     max-width: 1000px;
+    min-height: 100vh; /* Artificially add height to the container */
     margin: 1em auto;
+}
+
+.col-main{
+    flex: 1 80%;
+}
+
+.col-sidebar{
+    flex: 20%;
+}
+
+
+/* Applies sticky positiong to the side menu. It will dck 1em from the top of the viewport. */
+.affix{
+    position: sticky;
+    top: 1em;
 }
 
 .dropdown-menu{
